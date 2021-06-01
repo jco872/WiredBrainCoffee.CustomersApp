@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="WiredBrainCoffee.CustomersApp.MainPageWithNotes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WiredBrainCoffee.CustomersApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <!--
+            Content property of the button set to 'Add Customer'
+            'Attribute syntax' - use the Content attribute to set this property
+        
+            Can also set set this property with a property element
+            --> 
+            <Button x:ConnectionId='2' Margin="10"
+                                                   >
+            
+                <!-- Create a property element -->
+                <!-- Button. will see all properties -->
+                <!-- Class Name.Property Name -->
+            
+                <!-- Elements mapped to classes (Button)
+                     But Property Element mapped to a property and not to a class
+                -->
+                <Button.Content>Add Customer</Button.Content>
+            </Button>
+
+            <!-- Use Property Element syntax to assign a complex object to a Property-->
+
+            <Button x:ConnectionId='3' Margin="10"                                >
+                <!-- Stack Panel to stack elements vertically -->
+                <StackPanel Orientation="Horizontal">
+                    <SymbolIcon Symbol="AddFriend" />
+                    <TextBlock Text="Add Customer" Margin="5 0 0 0" />
+                </StackPanel>
+            </Button>
+        
+            <!-- Content Syntax -->
+            <Button x:ConnectionId='4' Margin="10"                                >
+                <!-- Like Property Element Syntax, just omit the property element <Button.Content>-->
+                Add Customer
+                <!-- Why assigned to the Content property of the button, and not another property? -->
+                <!--   The XAML processor: the logic that reads the xaml document and creates the objects from that xaml document -->
+                <!--   Sees the button element has content directly inside, and is not assigned to a property with a property element -->
+                <!--      Need to find out to which property it should assign that content -->
+                <!--      - Looks for the ContentPropertyAttribute (on the Button class, because that's what contains it -->
+                <!--      [ContentProperty(Name="Content")] -->
+                <!--      public class ContentControl { ... } -->
+            </Button>
+
+
+            <!--
+            stackPanel.Children  // UI Element Collection
+            stackPanel.Children.Add(new TextBlock());
+            stackPanel.Children.Add(new Button());
+            -->
+            <StackPanel>
+                <Rectangle Fill="LightBlue" Height="20" Margin="2" />
+                <Rectangle Fill="LightBlue" Height="20" Margin="2" />
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="LightBlue"  Grid.Column="0" Grid.Row="0" />
+            <Rectangle Fill="Red"  Grid.Column="1" Grid.Row="0" />
+            <Rectangle Fill="Orange"  Grid.Column="0" Grid.Row="1" />
+            <Rectangle Fill="Black"  Grid.Column="1" Grid.Row="1" />
+        </Grid>
+    </Grid>
+
+
+</Page>
+

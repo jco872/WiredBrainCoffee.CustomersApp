@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</Source>
+    <SmallTileSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</SmallTileSource>
+    <MediumTileSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</MediumTileSource>
+    <WideTileSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</WideTileSource>
+    <LargeTileSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</LargeTileSource>
+    <AppIconSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</AppIconSource>
+    <SplashScreenSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\jco87\Downloads\xaml-getting-started %282%29\03\demos\before\coffeeCup.png</PackageLogoSource>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+</Project>
