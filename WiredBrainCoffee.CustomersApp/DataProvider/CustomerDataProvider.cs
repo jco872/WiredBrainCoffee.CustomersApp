@@ -30,6 +30,11 @@ namespace WiredBrainCoffee.CustomersApp.DataProvider
           new Customer{FirstName="Elsa",LastName="Queen"},
           new Customer{FirstName="Alex",LastName="Baier", IsDeveloper=true},
         };
+
+        Customer jeff = new Customer { FirstName="Jeff", LastName="Counts", IsDeveloper=true};
+
+        customerList.Add(jeff);
+        customerList.Add(jeff);
       }
       else
       {

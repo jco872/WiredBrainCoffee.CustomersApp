@@ -48,15 +48,18 @@ namespace WiredBrainCoffee.CustomersApp
             deferral.Complete();
         }
 
-        private async void ButtonAddCustomer_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddCustomer_Click(object sender, RoutedEventArgs e)
         {
-            var messageDialog = new MessageDialog("Customer Added!");
-            var x = await messageDialog.ShowAsync();
+            var customer = new Customer { FirstName = "New " };
+            customerListView.Items.Add(customer);
+            customerListView.SelectedItem = customer;
         }
 
         private void ButtonDeleteCustomer_Click(object sender, RoutedEventArgs e)
         {
+            var customer = customerListView.SelectedItem as Customer;
 
+            customerListView.Items.Remove(customer);                      
         }
 
         private void ButtonMove_Click(object sender, RoutedEventArgs e)
@@ -67,5 +70,14 @@ namespace WiredBrainCoffee.CustomersApp
             moveSymbolIcon.Symbol = newColumns == 0 ? Symbol.Forward : Symbol.Back;
             customerListGrid.SetValue(Grid.ColumnProperty, newColumns);
         }
+
+        private void CustomerListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var customer = customerListView.SelectedItem as Customer;
+
+            customerDetailControl.Customer = customer;
+        }
+
+       
     }
 }
